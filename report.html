@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Penetration Testing Report</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #0d1117;
+            color: #00ffcc;
+            padding: 20px;
+        }
+        h1 {
+            color: #00ffff;
+            border-bottom: 2px solid #00ffcc;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .box {
+            background: #161b22;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00ffcc33;
+        }
+        .success {
+            color: #00ff00;
+        }
+        .warning {
+            color: #ffcc00;
+        }
+        .danger {
+            color: #ff4d4d;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🔥 Penetration Testing Report (Demo)</h1>
+
+<div class="section box">
+    <h2>🔎 Port Scanner</h2>
+    <p class="success">Open Port: 80</p>
+    <p class="success">Open Port: 443</p>
+    <p class="success">Open Port: 22</p>
+</div>
+
+<div class="section box">
+    <h2>🔑 Brute Force</h2>
+    <p class="success">Success! Username: admin | Password: admin123</p>
+</div>
+
+<div class="section box">
+    <h2>🌐 Banner Grabber</h2>
+    <p>HTTP/1.1 200 OK</p>
+    <p>Server: Apache/2.4.7 (Ubuntu)</p>
+    <p>X-Powered-By: PHP/7.4.3</p>
+</div>
+
+<div class="section box">
+    <h2>🌍 GeoIP Lookup</h2>
+    <p>IP: 192.168.1.1</p>
+    <p>Country: United States</p>
+    <p>Region: Virginia</p>
+    <p>City: Ashburn</p>
+    <p>ISP: Google LLC</p>
+</div>
+
+<div class="section box">
+    <h2>🛡️ Vulnerability Scanner</h2>
+
+    <p class="danger">[+] SQL Injection Vulnerable</p>
+    <p>Payload: ' OR 1=1--</p>
+    <p>URL: http://demo.testfire.net/search.jsp?query=' OR 1=1--</p>
+
+    <br>
+
+    <p class="danger">[+] XSS Vulnerable</p>
+    <p>Payload: &lt;script&gt;alert(1)&lt;/script&gt;</p>
+    <p>URL: http://demo.testfire.net/search.jsp?query=&lt;script&gt;alert(1)&lt;/script&gt;</p>
+
+    <br>
+
+    <p class="danger">[+] Directory Traversal Vulnerable</p>
+    <p>Payload: ../../etc/passwd</p>
+    <p>URL: http://demo.testfire.net/download?file=../../etc/passwd</p>
+
+</div>
+
+</body>
+</html>
